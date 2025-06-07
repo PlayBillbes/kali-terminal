@@ -6,9 +6,6 @@ ENV TTY_VER 1.6.1
 
 RUN apt-get -y update && \
     apt-get install -y curl && \
-    addgroup --gid 10008 choreo &&\
-    adduser --disabled-password  --no-create-home --uid 10008 --ingroup choreo choreouser &&\
-    usermod -aG sudo choreouser &&\
     curl -sLk https://github.com/tsl0922/ttyd/releases/download/${TTY_VER}/ttyd_linux.x86_64 -o ttyd_linux && \
     chmod +x ttyd_linux && \
     cp ttyd_linux /usr/local/bin/
