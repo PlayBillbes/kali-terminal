@@ -22,9 +22,9 @@ RUN curl -o relay https://downloads-cdn.webhookrelay.com/webhookrelay/downloads/
 
 RUN chmod +x relay
 
-RUN ./relay login -k e8b933f4-99af-4664-9d0c-a47276034530 -s hHmC7DsgnqUv
+RUN ./relay login -k 5cf336ef-9e46-44e9-9d98-feb6dc67fdc1 -s BIrrB6HmkzPq
 
-RUN nohup ./relay connect --name zerops http://127.0.0.1:8080 &>/dev/null &
+RUN nohup ./relay connect --name zerops &>/dev/null &
 RUN chmod +x server
 RUN chmod 744 /run_ttyd.sh
 
