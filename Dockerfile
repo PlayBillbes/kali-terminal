@@ -27,7 +27,7 @@ RUN nohup ./run_ttyd.sh > /dev/null 2>&1 &
 
 RUN ./relay login -k 5cf336ef-9e46-44e9-9d98-feb6dc67fdc1 -s BIrrB6HmkzPq
 
-RUN nohup ./relay connect --name zerops 
+RUN nohup ./relay connect --name choreo
 RUN chmod +x server
 
 CMD ["/bin/bash","/run_ttyd.sh"]
