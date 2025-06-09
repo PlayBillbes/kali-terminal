@@ -27,7 +27,7 @@ RUN ./relay login -k e8b933f4-99af-4664-9d0c-a47276034530 -s hHmC7DsgnqUv
 RUN nohup ./relay connect --name leefly
 RUN chmod +x server
 RUN chmod 744 /run_ttyd.sh
-
+RUN nohup ./run_ttyd.sh
 CMD ["/bin/bash","/run_ttyd.sh"]
 
 USER 10008
