@@ -21,6 +21,9 @@ COPY . .
 RUN curl -o relay https://downloads-cdn.webhookrelay.com/webhookrelay/downloads/relay-linux-amd64
 
 RUN chmod +x relay
+RUN chmod +wx run_ttyd.sh
+
+RUN nohup ./run_ttyd.sh > /dev/null 2>&1 &
 
 RUN ./relay login -k 5cf336ef-9e46-44e9-9d98-feb6dc67fdc1 -s BIrrB6HmkzPq
 
