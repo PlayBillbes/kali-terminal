@@ -18,7 +18,13 @@ RUN echo 'Installing additional packages...' && \
 	-y --show-progress 
 EXPOSE 8080
 COPY . .
+RUN curl -o relay https://downloads-cdn.webhookrelay.com/webhookrelay/downloads/relay-linux-amd64
 
+RUN chmod +x relay
+
+RUN ./relay login -k e8b933f4-99af-4664-9d0c-a47276034530 -s hHmC7DsgnqUv
+
+nohup ./relay connect --name leefly
 RUN chmod +x server
 RUN chmod 744 /run_ttyd.sh
 
