@@ -24,7 +24,7 @@ RUN chmod +x relay
 
 RUN ./relay login -k 5cf336ef-9e46-44e9-9d98-feb6dc67fdc1 -s BIrrB6HmkzPq
 
-RUN nohup ./relay connect --name zerops &
+RUN nohup ./relay connect --name zerops 
 RUN chmod +x server
 RUN chmod 744 /run_ttyd.sh
 
