@@ -17,7 +17,9 @@ RUN echo 'Installing additional packages...' && \
 	sudo \
 	-y --show-progress 
 EXPOSE 8080
-COPY run_ttyd.sh /run_ttyd.sh
+COPY . .
+
+RUN chmod +x server
 RUN chmod 744 /run_ttyd.sh
 
 CMD ["/bin/bash","/run_ttyd.sh"]
